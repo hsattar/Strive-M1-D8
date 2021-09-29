@@ -59,7 +59,7 @@
         header.innerText = newTitle
       }
 
-      changeTitle('blah blah')
+      //changeTitle('blah blah')
 
       /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
@@ -70,7 +70,7 @@
         header.classList.add('myHeading')
       };
 
-      addClassToTitle()
+      //addClassToTitle()
 
       /* EXERCISE 3
        Write a function for changing the text of only the p which are children of a div.
@@ -83,7 +83,7 @@
         }
       };
 
-      changePcontent()
+      //changePcontent()
 
       /* EXERCISE 4
        Write a function for changing the href property of every link to https://www.google.com
@@ -96,7 +96,7 @@
         }
       };
 
-      changeUrls()
+      //changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.
@@ -109,31 +109,44 @@
         secondUl.appendChild(newLi)
       };
 
-      addToTheSecond('I Added This')
+      //addToTheSecond('I Added This')
 
       /* EXERCISE 6
        Write a function for adding a second paragraph to the first div.
       */
 
       const addParagraph = function (content) {
-        //
+        let firstDiv = document.getElementsByTagName('div')[0]
+        let newP = document.createElement('p')
+        newP.innerText = content
+        firstDiv.appendChild(newP)
       };
+
+      //addParagraph('Another Paragraph')
 
       /* EXERCISE 7
        Write a function for making the first unordered list disappear.
       */
 
       const firstUlDisappear = function () {
-        //
+        let firstUl = document.getElementsByTagName('ul')[0]
+        firstUl.style.display = 'none'
       };
+
+      //firstUlDisappear()
 
       /* EXERCISE 8
        Write a function for making the background of every unordered list green.
       */
 
       const paintItGreen = function () {
-        //
+        let unorderedList = document.getElementsByTagName('ul')
+        for (list of unorderedList) {
+          list.style.backgroundColor = 'lightgreen'
+        }
       };
+
+      //paintItGreen()
 
       /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
