@@ -27,7 +27,7 @@
         <li>3rd</li>
       </ul>
 
-      <a href="strive.school">This link goes to Strive School</a>
+      <a href="https://strive.school" target="_blank">This link goes to Strive School</a>
 
       <div>
         <p>This text is just for the exercise</p>
@@ -90,16 +90,26 @@
       */
 
       const changeUrls = function () {
-        //
+        let aTags = document.getElementsByTagName('a')
+        for (a of aTags) {
+          a.setAttribute('href', 'https://www.google.com')
+        }
       };
+
+      changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.
       */
 
       const addToTheSecond = function (content) {
-        //
+        let secondUl = document.getElementsByTagName('ul')[1]
+        let newLi = document.createElement('li')
+        newLi.innerText = content
+        secondUl.appendChild(newLi)
       };
+
+      addToTheSecond('I Added This')
 
       /* EXERCISE 6
        Write a function for adding a second paragraph to the first div.
@@ -153,7 +163,7 @@
       */
 
       window.onload = function () {
-        //
+        // alert('Hello World')
       };
 
       /* EXERCISE 13
