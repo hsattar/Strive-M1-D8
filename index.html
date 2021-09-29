@@ -55,24 +55,35 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
-      };
+        let header = document.getElementsByTagName('h1')[0]
+        header.innerText = newTitle
+      }
+
+      changeTitle('blah blah')
 
       /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
       */
 
       const addClassToTitle = function () {
-        //
+        let header = document.getElementsByTagName('h1')[0]
+        header.classList.add('myHeading')
       };
+
+      addClassToTitle()
 
       /* EXERCISE 3
        Write a function for changing the text of only the p which are children of a div.
       */
 
       const changePcontent = function () {
-        //
+        let paraInsideDivs = document.querySelectorAll('div p')
+        for (para of paraInsideDivs) {
+          para.innerText = "I'm A Paragraph Inside A Div"
+        }
       };
+
+      changePcontent()
 
       /* EXERCISE 4
        Write a function for changing the href property of every link to https://www.google.com
